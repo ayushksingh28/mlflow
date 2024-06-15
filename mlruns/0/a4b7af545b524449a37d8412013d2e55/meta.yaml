@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/phoenix/Documents/Proj/final/mlflow/mlflow/mlruns/0/a4b7af545b524449a37d8412013d2e55/artifacts
+end_time: 1718432277876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a4b7af545b524449a37d8412013d2e55
+run_name: clean-panda-587
+run_uuid: a4b7af545b524449a37d8412013d2e55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718432276564
+status: 3
+tags: []
+user_id: phoenix
