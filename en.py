@@ -28,7 +28,28 @@ def evaluate(actual, pred):
     r2 = r2_score(actual, pred)
 
 
-def main(alpha, l1_ration):
-    df = data():
+def main(alpha, l1_ratio):
+    df = data()
 
+    train, test = train_test_split(df)
+
+    train_x = train.drop(["quality"], axis = 1)
+    test_x = test.drop(["quality"], axis = 1)
+
+    train_y = train[["quality"]]
+    test_y = test[["quality"]]
+
+    lr = ElasticNet(alpha = alpha, l1_ratio = l1_ratio, random_state = 42)
+    lr.fit(train_x, train_y)
+
+    pred = lr.predict(test_x)
+    rmse, mae, r2 = evaluate(test_y, pred)
+
+    print(f"Elastic Net parameters : {alpha}, l1_ratio: {l1_ratio}")
+    print(f"Elasti Net Metric : rmse: {rmse}, mae: {mae}, r2_score: {r2}")
+
+
+if __name__== "__main__":
+    args = argparse.ArgumentParser()
     
+
